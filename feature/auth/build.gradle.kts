@@ -35,6 +35,14 @@ kotlin {
             implementation(libs.filekit.core)
             implementation(libs.filekit.compose)
             implementation(libs.filekit.dialog.compose)
+            //prospect picture
+            implementation(libs.coil.kt.compose)
+        }
+
+        androidMain.dependencies {
+            //prospect picture
+            implementation(libs.accompanist.permissions)
+
         }
     }
 }

@@ -47,6 +47,10 @@ kotlin{
             implementation(libs.filekit.dialog.compose)
             implementation(libs.compottie.resources)
             implementation(libs.compottie.lite)
+            //prospect image upload
+            implementation(libs.ktor.client.core)
+            //datepicker
+            implementation(compose.materialIconsExtended)
         }
     }
 }

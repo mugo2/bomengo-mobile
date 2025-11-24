@@ -29,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import mifos_mobile.feature.settings.generated.resources.Res
+import mifos_mobile.feature.settings.generated.resources.afiding_icon
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_logo_content_description
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_mifos
 import mifos_mobile.feature.settings.generated.resources.feature_settings_appinfo_all_rights_reserved
@@ -38,7 +39,6 @@ import mifos_mobile.feature.settings.generated.resources.feature_settings_appinf
 import mifos_mobile.feature.settings.generated.resources.feature_settings_appinfo_topbar_title
 import mifos_mobile.feature.settings.generated.resources.feature_settings_appinfo_version
 import mifos_mobile.feature.settings.generated.resources.mifo_app_info_icon
-import mifos_mobile.feature.settings.generated.resources.mifos_icon
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.mifos.mobile.core.designsystem.component.MifosCard
@@ -110,7 +110,7 @@ internal fun AppInfoContent(
                             horizontalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
                         ) {
                             Image(
-                                painter = painterResource(Res.drawable.mifos_icon),
+                                painter = painterResource(Res.drawable.afiding_icon),
                                 contentDescription =
                                 stringResource(Res.string.feature_settings_about_logo_content_description),
                                 modifier = Modifier

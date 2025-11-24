@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.settings.generated.resources.Res
+import mifos_mobile.feature.settings.generated.resources.afiding_icon
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_logo_content_description
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_mifos
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_point_1
@@ -38,7 +39,6 @@ import mifos_mobile.feature.settings.generated.resources.feature_settings_about_
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_who_are_we_desc
 import mifos_mobile.feature.settings.generated.resources.feature_settings_action_about_us
 import mifos_mobile.feature.settings.generated.resources.ic_icon_money_transfer
-import mifos_mobile.feature.settings.generated.resources.mifos_icon
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -97,7 +97,7 @@ internal fun AboutScreenContent(
                         horizontalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
                     ) {
                         Image(
-                            painter = painterResource(Res.drawable.mifos_icon),
+                            painter = painterResource(Res.drawable.afiding_icon),
                             contentDescription =
                             stringResource(Res.string.feature_settings_about_logo_content_description),
                             modifier = Modifier

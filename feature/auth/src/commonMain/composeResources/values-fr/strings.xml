@@ -71,6 +71,8 @@
     <string name="feature_sign_in_sign_up">Inscrivez-vous !</string>
     <string name="feature_sign_in_username_error">Adresse e-mail introuvable</string>
     <string name="feature_sign_in_password_error">Votre mot de passe n'est pas correct !</string>
+    <string name="feature_sign_in_dont_have_an_id">Vous n'avez pas d'identifiant ?</string>
+    <string name="feature_sign_in_generate_id">Obtenez vos accès !</string>
 
     <string name="feature_signup_title">S'inscrire</string>
     <string name="feature_signup_sub_title">Créez un compte pour continuer !</string>
@@ -181,4 +183,57 @@
     <string name="feature_recover_now_recovered_successfully_tip">Vous pouvez maintenant vous connecter avec votre nom d'utilisateur (numéro de téléphone) et mot de passe.</string>
     <string name="feature_recover_now_recovered_failed">Échec de la récupération du mot de passe</string>
     <string name="feature_recover_now_registered_failed_tip">Il y a eu une erreur lors de la récupération du mot de passe de l'utilisateur. Veuillez réessayer.</string>
+
+    <!--New Client-->
+    <string name="feature_newclient_title">Nouveau client</string>
+    <string name="feature_newclient_sub_title">Demandez l'ouverture d'un compte !</string>
+    <string name="feature_newclient_first_name_label">Prénom</string>
+    <string name="feature_newclient_middle_name_label">Deuxième prénom</string>
+    <string name="feature_newclient_last_name_label">Nom de famille</string>
+    <string name="feature_newclient_gender_label">Genrer</string>
+    <string name="feature_newclient_dob_label">Date de naissance</string>
+    <string name="feature_newclient_select_date_label">Sélectionner votre date de naissance</string>
+    <string name="feature_newclient_cancel_date_label">Annuler la date</string>
+    <string name="feature_newclient_email_label">E-mail</string>
+    <string name="feature_newclient_cell_phone_label">Téléphone portable</string>
+    <string name="feature_newclient_customer_account_label">Compte client</string>
+    <string name="feature_newclient_password_label">Mot de passe</string>
+    <string name="feature_newclient_confirm_password_label">Confirmer le mot de passe</string>
+    <string name="feature_newclient_submit">Soumettre</string>
+    <string name="feature_newclient_already_have_an_account">Vous avez déjà un compte ?</string>
+    <string name="feature_newclient_log_in">Connectez-vous !</string>
+    <string name="feature_newclient_character_rules">Règles de caractères</string>
+    <string name="feature_newclient_please_select_action">Veuillez selectionner une action</string>
+    <string name="feature_newclient_take_a_photo">Prener une photo</string>
+    <string name="feature_newclient_upload_photo">Téleverser une photo</string>
+    <string name="feature_newclient_remove_existing_photo">Supprimer une photo existante</string>
+
+    <!-- Error messages -->
+    <string name="feature_newclient_error_invalid_name">Le nom contient un caractère invalide</string>
+    <string name="feature_newclient_error_first_name_empty">Le prénom ne peut pas être vide</string>
+    <string name="feature_newclient_error_middle_name_empty">Le deuxième prénom ne peut pas être vide</string>
+    <string name="feature_newclient_error_last_name_empty">Le nom de famille ne peut pas être vide</string>
+    <string name="feature_newclient_error_invalid_email">Adresse e-mail invalide</string>
+    <string name="feature_newclient_error_invalid_mobile_number">Numéro de mobile invalide</string>
+    <string name="feature_newclient_error_customer_account_empty">Le compte client est requis</string>
+    <string name="feature_newclient_error_customer_account_not_valid">Fournissez un compte client valide</string>
+    <string name="feature_newclient_error_password_required_error">Le mot de passe est requis</string>
+    <string name="feature_newclient_error_password_short">Le mot de passe doit contenir au moins 6 caractères</string>
+    <string name="feature_newclient_error_password_mismatch">Les mots de passe ne correspondent pas</string>
+    <string name="feature_newclient_error_name_contains_digits">Le nom ne doit pas contenir de chiffres</string>
+    <string name="feature_newclient_error_name_contains_symbols">Le nom ne doit pas contenir de symboles et d'espaces</string>
+    <string name="feature_newclient_error_name_contains_emoji">Le texte ne doit pas contenir d'emoji ou de caractères invalides</string>
+    <string name="feature_newclient_error_picture_empty">La photo est obligatoire</string>
+    <string name="feature_newclient_error_invalid_gender">Le genre n'est pas valide</string>
+    <string name="feature_newclient_error_gender_empty">Le genre ne peut pas être vide</string>
+    <string name="feature_newclient_error_date_format">Le format de la date de naissance n'est pas valide</string>
+    <string name="feature_newclient_error_date_empty">La date de naissance ne peut pas être vide</string>
+    <string name="feature_newclient_error_date_future">La date de naissance ne peut pas être dans le futur</string>
+    <string name="feature_newclient_error_date_legaldate">La client doit avoir plus de 18 ans</string>
+
+    <string name="feature_newclient_user_registered_successfully">Utilisateur enregistré avec succès</string>
+    <string name="feature_newclient_user_registered_successfully_tip">Vous pouvez maintenant vous connecter avec votre nom d'utilisateur (numéro de téléphone) et mot de passe.</string>
+    <string name="feature_newclient_user_registered_failed">Échec de l'enregistrement de l'utilisateur</string>
+    <string name="feature_newclient_user_registered_failed_tip">Il y a eu une erreur lors de l'enregistrement de l'utilisateur. Veuillez réessayer.</string>
+
 </resources>

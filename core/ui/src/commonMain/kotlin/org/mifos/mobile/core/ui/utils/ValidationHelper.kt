@@ -9,6 +9,10 @@
  */
 package org.mifos.mobile.core.ui.utils
 
+import io.github.vinceglb.filekit.PlatformFile
+import io.github.vinceglb.filekit.size
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
 import mifos_mobile.core.ui.generated.resources.Res
 import mifos_mobile.core.ui.generated.resources.validation_amount_empty
 import mifos_mobile.core.ui.generated.resources.validation_amount_invalid_decimal_places
@@ -52,6 +56,9 @@ import org.mifos.mobile.core.model.Country
 import org.mifos.mobile.core.model.entity.Currency
 import org.mifos.mobile.core.model.worldCountries
 import kotlin.math.round
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
+import kotlin.time.Instant
 
 @Suppress("ReturnCount", "CyclomaticComplexMethod", "MaxLineLength", "TooManyFunctions")
 object ValidationHelper {
@@ -586,6 +593,32 @@ object ValidationHelper {
         val paddedFractional = fractionalString.padStart(decimalPlaces, '0')
 
         return "$integerPart.$paddedFractional"
+    }
+
+    fun isValidGender(gender: String): Boolean {
+        // return gender == "Male" || gender == "Female"
+        return true
+    }
+
+    fun isValidPicture(picture: PlatformFile?): Boolean {
+        return picture != null && picture.size() > 0
+    }
+
+    fun isValidDateOfBirth(dateOfBirth: Long): Boolean {
+        return isOver18(dateOfBirth)
+    }
+
+    @OptIn(ExperimentalTime::class)
+    private fun isOver18(birthDateMillis: Long): Boolean {
+        val birthDate = Instant.fromEpochMilliseconds(birthDateMillis)
+            .toLocalDateTime(TimeZone.currentSystemDefault())
+        val today = Instant.fromEpochMilliseconds(Clock.System.now().toEpochMilliseconds())
+            .toLocalDateTime(TimeZone.currentSystemDefault())
+
+        val isOver18 = today.year - birthDate.year > 18 ||
+            (today.year - birthDate.year == 18 && today.dayOfYear >= birthDate.dayOfYear)
+
+        return isOver18
     }
 }
 

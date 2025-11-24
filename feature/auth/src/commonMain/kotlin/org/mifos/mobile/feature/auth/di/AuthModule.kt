@@ -12,6 +12,7 @@ package org.mifos.mobile.feature.auth.di
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 import org.mifos.mobile.feature.auth.login.LoginViewModel
+import org.mifos.mobile.feature.auth.newClient.NewClientViewModel
 import org.mifos.mobile.feature.auth.otpAuthentication.OtpAuthenticationViewModel
 import org.mifos.mobile.feature.auth.recoverPassword.RecoverPasswordViewModel
 import org.mifos.mobile.feature.auth.registration.RegistrationViewModel
@@ -25,4 +26,5 @@ val AuthModule = module {
     viewModelOf(::OtpAuthenticationViewModel)
     viewModelOf(::SetPasswordViewModel)
     viewModelOf(::RecoverPasswordViewModel)
+    viewModelOf(::NewClientViewModel)
 }

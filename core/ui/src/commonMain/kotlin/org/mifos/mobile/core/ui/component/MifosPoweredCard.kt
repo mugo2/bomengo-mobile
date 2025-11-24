@@ -9,27 +9,21 @@
  */
 package org.mifos.mobile.core.ui.component
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import mifos_mobile.core.ui.generated.resources.Res
-import mifos_mobile.core.ui.generated.resources.ic_icon_powered_logo
 import mifos_mobile.core.ui.generated.resources.powered_by
-import org.jetbrains.compose.resources.DrawableResource
-import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -40,7 +34,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosTypography
 fun MifosPoweredCard(
     modifier: Modifier = Modifier,
     text: String? = stringResource(Res.string.powered_by),
-    icon: DrawableResource? = Res.drawable.ic_icon_powered_logo,
+    // icon: DrawableResource? = Res.drawable.ic_icon_powered_logo,
 ) {
     Box(
         modifier = modifier
@@ -64,7 +58,7 @@ fun MifosPoweredCard(
                 style = MifosTypography.tag,
                 color = MaterialTheme.colorScheme.primary,
             )
-            Spacer(modifier = Modifier.width(DesignToken.spacing.extraSmall))
+            /*Spacer(modifier = Modifier.width(DesignToken.spacing.extraSmall))
             if (icon != null) {
                 Image(
                     painter = painterResource(
@@ -72,7 +66,7 @@ fun MifosPoweredCard(
                     ),
                     contentDescription = null,
                 )
-            }
+            }*/
         }
     }
 }
@@ -87,7 +81,7 @@ private fun Mifos_Powered_Preview() {
         ) {
             MifosPoweredCard(
                 text = "Powered Card",
-                icon = Res.drawable.ic_icon_powered_logo,
+                // icon = Res.drawable.ic_icon_powered_logo,
             )
         }
     }

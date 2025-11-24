@@ -15,7 +15,7 @@
     <string name="something_went_wrong">Quelque chose s'est mal passé</string>
     <string name="core_common_working">Travail commun au cœur</string>
 
-    <string name="powered_by">Propulsé par</string>
+    <string name="powered_by">Propulsé par Afiding Capital</string>
 
     <string name="password_checker_empty_error">Le mot de passe ne peut pas être vide.</string>
     <string name="password_checker_too_long_error">Le mot de passe est trop long. La longueur maximale est de 128 caractères.</string>

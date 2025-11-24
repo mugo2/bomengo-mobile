@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "534bff4d0668aa4c7b843d255397b445",
+    "identityHash": "92c616aea7ae4572a376d9cfbff0647a",
     "entities": [
       {
-        "tableName": "charges",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `clientId` INTEGER, `chargeId` INTEGER, `name` TEXT, `dueDate` TEXT NOT NULL, `chargeTimeType` TEXT, `chargeCalculationType` TEXT, `currency` TEXT, `amount` REAL NOT NULL, `amountPaid` REAL NOT NULL, `amountWaived` REAL NOT NULL, `amountWrittenOff` REAL NOT NULL, `amountOutstanding` REAL NOT NULL, `penalty` INTEGER NOT NULL, `isActive` INTEGER NOT NULL, `isChargePaid` INTEGER NOT NULL, `isChargeWaived` INTEGER NOT NULL, `paid` INTEGER NOT NULL, `waived` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "tableName": "ChargeEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `clientId` INTEGER, `chargeId` INTEGER, `name` TEXT, `dueDate` TEXT NOT NULL, `chargeTimeType` TEXT, `chargeCalculationType` TEXT, `currency` TEXT, `amount` REAL NOT NULL, `amountPaid` REAL NOT NULL, `amountWaived` REAL NOT NULL, `amountWrittenOff` REAL NOT NULL, `amountOutstanding` REAL NOT NULL, `penalty` INTEGER NOT NULL, `isActive` INTEGER NOT NULL, `isChargePaid` INTEGER NOT NULL, `isChargeWaived` INTEGER NOT NULL, `paid` INTEGER NOT NULL, `waived` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -118,14 +118,12 @@
         ],
         "primaryKey": {
           "autoGenerate": false,
-          "columnNames": [
-            "id"
-          ]
+          "columnNames": []
         }
       },
       {
-        "tableName": "mifos_notification",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`timeStamp` INTEGER NOT NULL, `msg` TEXT, `read` INTEGER, PRIMARY KEY(`timeStamp`))",
+        "tableName": "MifosNotificationEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`timeStamp` INTEGER NOT NULL, `msg` TEXT, `read` INTEGER)",
         "fields": [
           {
             "fieldPath": "timeStamp",
@@ -146,15 +144,13 @@
         ],
         "primaryKey": {
           "autoGenerate": false,
-          "columnNames": [
-            "timeStamp"
-          ]
+          "columnNames": []
         }
       }
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '534bff4d0668aa4c7b843d255397b445')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '92c616aea7ae4572a376d9cfbff0647a')"
     ]
   }
 }

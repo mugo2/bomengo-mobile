@@ -72,6 +72,8 @@
     <string name="feature_sign_in_sign_up">Sign up!</string>
     <string name="feature_sign_in_username_error">Email address not found</string>
     <string name="feature_sign_in_password_error">Your password is not correct!</string>
+    <string name="feature_sign_in_dont_have_an_id">Don't have an identifier ?</string>
+    <string name="feature_sign_in_generate_id">Get your access !</string>
 
     <string name="feature_signup_title">Sign up</string>
     <string name="feature_signup_sub_title">Create an account to continue!</string>
@@ -107,7 +109,6 @@
     <string name="feature_signup_user_registered_successfully_tip">You can now log in with your username (phone number) and password.</string>
     <string name="feature_signup_user_registered_failed">Failed To Register The User</string>
     <string name="feature_signup_user_registered_failed_tip">There is an error to register the user. Please try again.</string>
-
 
     <string name="feature_upload_id_title">Upload ID</string>
     <string name="feature_upload_id_subtitle">Upload your ID and photo for verification!</string>
@@ -186,5 +187,58 @@
     <string name="feature_recover_now_recovered_successfully_tip">You can now log in with your username(phone number) and password.</string>
     <string name="feature_recover_now_recovered_failed">Password Recovery Failed</string>
     <string name="feature_recover_now_registered_failed_tip">There is an error to recover the password of the user. Please try again.</string>
+
+    <!--New Client-->
+    <string name="feature_newclient_title">New client</string>
+    <string name="feature_newclient_sub_title">Fill in your personal details to request an account!</string>
+    <string name="feature_newclient_first_name_label">First Name</string>
+    <string name="feature_newclient_middle_name_label">Middle Name</string>
+    <string name="feature_newclient_last_name_label">Last Name</string>
+    <string name="feature_newclient_gender_label">Gender</string>
+    <string name="feature_newclient_dob_label">Date of Birth</string>
+    <string name="feature_newclient_select_date_label">Select Date</string>
+    <string name="feature_newclient_cancel_date_label">Cancel</string>
+    <string name="feature_newclient_email_label">Email</string>
+    <string name="feature_newclient_cell_phone_label">Cell Phone</string>
+    <string name="feature_newclient_customer_account_label">Customer Account</string>
+    <string name="feature_newclient_password_label">Password</string>
+    <string name="feature_newclient_confirm_password_label">Confirm Password</string>
+    <string name="feature_newclient_submit">Submit</string>
+    <string name="feature_newclient_already_have_an_account">Already have an account?</string>
+    <string name="feature_newclient_log_in">Log in!</string>
+    <string name="feature_newclient_character_rules">Character Rules</string>
+    <string name="feature_newclient_please_select_action">Please select action</string>
+    <string name="feature_newclient_take_a_photo">Take a Photo</string>
+    <string name="feature_newclient_upload_photo">Upload Photo</string>
+    <string name="feature_newclient_remove_existing_photo">Remove Existing Photo</string>
+
+    <!-- Error messages -->
+    <string name="feature_newclient_error_invalid_name">Name contain invalid character</string>
+    <string name="feature_newclient_error_first_name_empty">First name cannot be empty</string>
+    <string name="feature_newclient_error_middle_name_empty">Middle name cannot be empty</string>
+    <string name="feature_newclient_error_last_name_empty">Last name cannot be empty</string>
+    <string name="feature_newclient_error_invalid_email">Invalid email address</string>
+    <string name="feature_newclient_error_invalid_mobile_number">Invalid mobile number</string>
+    <string name="feature_newclient_error_customer_account_empty">Customer account is required</string>
+    <string name="feature_newclient_error_customer_account_not_valid">Provide valid Customer account</string>
+    <string name="feature_newclient_error_password_required_error">Password is Required</string>
+    <string name="feature_newclient_error_password_short">Password must be at least 6 characters</string>
+    <string name="feature_newclient_error_password_mismatch">Passwords do not match</string>
+    <string name="feature_newclient_error_name_contains_digits">Name should not contain digits</string>
+    <string name="feature_newclient_error_name_contains_symbols">Name should not contain symbols and spaces</string>
+    <string name="feature_newclient_error_name_contains_emoji">Text must not contain emoji or invalid characters</string>
+    <string name="feature_newclient_error_picture_empty">Picture cannot be empty</string>
+    <string name="feature_newclient_error_invalid_gender">Invalid gender</string>
+    <string name="feature_newclient_error_gender_empty">Gender cannot be empty</string>
+    <string name="feature_newclient_error_date_format">Invalid birth of date format</string>
+    <string name="feature_newclient_error_date_empty">The date of birth cannot be empty</string>
+    <string name="feature_newclient_error_date_future">The date of birth cannot be in the future</string>
+    <string name="feature_newclient_error_date_legaldate">The customer must be over 18 years old</string>
+
+    <string name="feature_newclient_user_registered_successfully">User Successfully Registered</string>
+    <string name="feature_newclient_user_registered_successfully_tip">You can now log in with your username (phone number) and password.</string>
+    <string name="feature_newclient_user_registered_failed">Failed To Register The User</string>
+    <string name="feature_newclient_user_registered_failed_tip">There is an error to register the user. Please try again.</string>
+
 
 </resources>

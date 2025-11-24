@@ -24,8 +24,8 @@ suspend fun extractErrorMessage(response: HttpResponse): String {
         val errorResponse = json.decodeFromString<MifosError>(responseText)
         errorResponse.errors.firstOrNull()?.defaultUserMessage
             ?: errorResponse.defaultUserMessage
-            ?: "Unknown error"
+            ?: "Erreur inconnue. Veuillez contacter Afiding Capital"
     } catch (e: Exception) {
-        "Failed to parse error response"
+        "Échec de l'interprétation de la réponse d'erreur"
     }
 }

@@ -84,6 +84,8 @@ class LoginViewModel(
             is LoginAction.ErrorDialogDismiss -> {
                 updateState { it.copy(dialogState = null) }
             }
+
+            is LoginAction.NewClientClicked -> sendEvent(LoginEvent.NavigateToNewClient)
         }
     }
 
@@ -173,6 +175,7 @@ sealed interface LoginEvent {
     data object NavigateToPasscode : LoginEvent
     data object NavigateToForgotPassword : LoginEvent
     data class ShowToast(val message: String) : LoginEvent
+    data object NavigateToNewClient : LoginEvent
 }
 
 sealed interface LoginAction {
@@ -183,6 +186,7 @@ sealed interface LoginAction {
     data object LoginClicked : LoginAction
     data object SignupClicked : LoginAction
     data object NavigateToForgotPassword : LoginAction
+    data object NewClientClicked : LoginAction
 
     sealed class Internal : LoginAction {
         data class ReceiveLoginResult(

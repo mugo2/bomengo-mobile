@@ -20,9 +20,19 @@ class BaseURL {
         return endpoint + API_PATH
     }
 
+    val customUrl: String
+        get() = PROTOCOL_HTTPS + CUSTOM_API_ENDPOINT + CUSTOM_API_PATH
+
     companion object {
-        const val API_ENDPOINT = "tt.mifos.community"
+//        const val API_ENDPOINT = "tt.mifos.community"
+//        const val API_ENDPOINT = "10.0.2.2:80"
+
+        const val API_ENDPOINT = "cbs-server.afidingcapital.com"
         const val API_PATH = "/fineract-provider/api/v1/self/"
         const val PROTOCOL_HTTPS = "https://"
+//        const val CUSTOM_API_ENDPOINT = "10.0.2.2:8080"
+
+        const val CUSTOM_API_ENDPOINT = "cbs-server.afidingcapital.com"
+        const val CUSTOM_API_PATH = "/custom-provider/api/v1/"
     }
 }

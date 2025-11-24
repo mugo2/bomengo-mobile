@@ -13,6 +13,8 @@ import io.ktor.client.HttpClient
 import io.ktor.client.plugins.auth.Auth
 import org.koin.dsl.module
 import org.mifos.mobile.core.datastore.UserPreferencesRepository
+import org.mifos.mobile.core.network.CustomDataManager
+import org.mifos.mobile.core.network.CustomKtorfitClient
 import org.mifos.mobile.core.network.DataManager
 import org.mifos.mobile.core.network.KtorfitClient
 import org.mifos.mobile.core.network.ktorHttpClient
@@ -41,5 +43,27 @@ val NetworkModule = module {
 
     single {
         DataManager(ktorfitClient = get(MifosClient))
+    }
+
+    single<HttpClient>(CustomKtorClient) {
+        val preferencesRepository = get<UserPreferencesRepository>()
+
+        ktorHttpClient.config {
+            install(Auth)
+            install(KtorInterceptor) {
+                getToken = { preferencesRepository.token.value }
+            }
+        }
+    }
+
+    single<CustomKtorfitClient>(MifosClient) {
+        CustomKtorfitClient.builder()
+            .httpClient(get(CustomKtorClient))
+            .baseURL(BaseURL().customUrl)
+            .build()
+    }
+
+    single {
+        CustomDataManager(customKtorfitClient = get(MifosClient))
     }
 }

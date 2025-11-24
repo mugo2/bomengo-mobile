@@ -44,7 +44,9 @@ import mifos_mobile.core.ui.generated.resources.ic_icon_logo_1
 import mifos_mobile.feature.auth.generated.resources.Res
 import mifos_mobile.feature.auth.generated.resources.feature_sign_in_Sign_in
 import mifos_mobile.feature.auth.generated.resources.feature_sign_in_dont_have_an_account
+import mifos_mobile.feature.auth.generated.resources.feature_sign_in_dont_have_an_id
 import mifos_mobile.feature.auth.generated.resources.feature_sign_in_forgot_password
+import mifos_mobile.feature.auth.generated.resources.feature_sign_in_generate_id
 import mifos_mobile.feature.auth.generated.resources.feature_sign_in_password_label
 import mifos_mobile.feature.auth.generated.resources.feature_sign_in_sign_up
 import mifos_mobile.feature.auth.generated.resources.feature_sign_in_sub_title
@@ -75,6 +77,7 @@ internal fun LoginScreen(
     navigateToRegisterScreen: () -> Unit,
     navigateToForgotPasswordScreen: () -> Unit,
     navigateToPasscodeScreen: () -> Unit,
+    navigateToNewClientScreen: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: LoginViewModel = koinViewModel(),
 ) {
@@ -96,6 +99,8 @@ internal fun LoginScreen(
                     snackbarHostState.showSnackbar(event.message)
                 }
             }
+
+            is LoginEvent.NavigateToNewClient -> navigateToNewClientScreen.invoke()
         }
     }
 
@@ -321,9 +326,32 @@ fun InputBox(
 
             Text(
                 modifier = Modifier.clickable(true) {
-                    onAction(LoginAction.SignupClicked)
+                    onAction(LoginAction.NewClientClicked)
                 },
                 text = stringResource(Res.string.feature_sign_in_sign_up),
+                style = MifosTypography.labelMediumEmphasized,
+                color = MaterialTheme.colorScheme.primary,
+            )
+        }
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = stringResource(Res.string.feature_sign_in_dont_have_an_id),
+                style = MifosTypography.labelMedium,
+            )
+
+            Spacer(
+                modifier = Modifier.width(DesignToken.spacing.extraSmall),
+            )
+
+            Text(
+                modifier = Modifier.clickable(true) {
+                    onAction(LoginAction.SignupClicked)
+                },
+                text = stringResource(Res.string.feature_sign_in_generate_id),
                 style = MifosTypography.labelMediumEmphasized,
                 color = MaterialTheme.colorScheme.primary,
             )

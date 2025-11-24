@@ -16,7 +16,7 @@
     <string name="something_went_wrong">Something went wrong</string>
     <string name="core_common_working">Core Common Working</string>
 
-    <string name="powered_by">Powered By</string>
+    <string name="powered_by">Powered By Afiding Capital</string>
 
     <string name="password_checker_empty_error">Password cannot be empty.</string>
     <string name="password_checker_too_long_error">Password is too long. Maximum length is 128 characters.</string>

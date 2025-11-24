@@ -501,7 +501,7 @@ class RegistrationViewModel(
         }
 
         val errorFree = isSuccess(firstNameError) &&
-            isSuccess(middleNameError) &&
+//            isSuccess(middleNameError) &&
             isSuccess(lastNameError) &&
             isSuccess(emailError) &&
             isSuccess(accountError) &&
@@ -531,9 +531,10 @@ class RegistrationViewModel(
                 registerPayload = RegisterPayload(
                     accountNumber = state.customerAccount,
                     authenticationMode = "email",
+//                    authenticationMode = "mobile",
                     email = state.email,
                     firstName = state.firstName,
-                    middleName = state.middleName,
+//                    middleName = state.middleName,
                     lastName = state.lastName,
                     mobileNumber = state.mobileNumber,
                     password = state.password,
@@ -632,7 +633,7 @@ data class SignUpState(
     val isSubmitButtonEnabled: Boolean
         get() = customerAccount.isNotBlank() &&
             firstName.isNotBlank() &&
-            middleName.isNotBlank() &&
+//            middleName.isNotBlank() &&
             lastName.isNotBlank() &&
             email.isNotBlank() &&
             password.isNotBlank() &&

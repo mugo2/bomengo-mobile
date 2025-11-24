@@ -58,7 +58,6 @@ import mifos_mobile.feature.auth.generated.resources.feature_signup_email_label
 import mifos_mobile.feature.auth.generated.resources.feature_signup_first_name_label
 import mifos_mobile.feature.auth.generated.resources.feature_signup_last_name_label
 import mifos_mobile.feature.auth.generated.resources.feature_signup_log_in
-import mifos_mobile.feature.auth.generated.resources.feature_signup_middle_name_label
 import mifos_mobile.feature.auth.generated.resources.feature_signup_password_label
 import mifos_mobile.feature.auth.generated.resources.feature_signup_sub_title
 import mifos_mobile.feature.auth.generated.resources.feature_signup_submit
@@ -436,13 +435,13 @@ fun getInputConfigs(
             labelRes = Res.string.feature_signup_first_name_label,
             onValueChange = { onAction(SignUpAction.OnFirstNameChange(it)) },
         ),
-        InputFieldConfig(
+/*        InputFieldConfig(
             value = state.middleName,
             state = state,
             errorText = state.middleNameError,
             labelRes = Res.string.feature_signup_middle_name_label,
             onValueChange = { onAction(SignUpAction.OnMiddleNameChange(it)) },
-        ),
+        ),*/
         InputFieldConfig(
             value = state.lastName,
             state = state,

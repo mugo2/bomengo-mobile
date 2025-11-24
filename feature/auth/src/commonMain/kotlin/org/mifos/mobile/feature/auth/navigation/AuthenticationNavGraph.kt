@@ -21,6 +21,8 @@ import kotlinx.serialization.Serializable
 import org.mifos.mobile.feature.auth.login.LoginRoute
 import org.mifos.mobile.feature.auth.login.loginDestination
 import org.mifos.mobile.feature.auth.login.navigateToLoginScreen
+import org.mifos.mobile.feature.auth.newClient.navigateToNewClientScreen
+import org.mifos.mobile.feature.auth.newClient.newClientDestination
 import org.mifos.mobile.feature.auth.otpAuthentication.navigateToOtpAuthScreen
 import org.mifos.mobile.feature.auth.otpAuthentication.otpAuthenticationDestination
 import org.mifos.mobile.feature.auth.recoverPassword.navigateToRecoverPasswordScreen
@@ -52,6 +54,7 @@ fun NavGraphBuilder.authenticationNavGraph(
             navigateToRegisterScreen = navController::navigateToRegisterScreen,
             navigateToPasscodeScreen = navigateToPasscodeScreen,
             navigateToForgotPasswordScreen = navController::navigateToRecoverPasswordScreen,
+            navigateToNewClientScreen = navController::navigateToNewClientScreen,
         )
 
         registrationDestination(
@@ -80,6 +83,12 @@ fun NavGraphBuilder.authenticationNavGraph(
         setPasswordDestination(
             navigateToStatusScreen = navigateToStatusScreen,
             navigateToLoginScreen = navController::navigateToLoginScreen,
+        )
+        newClientDestination(
+            navigateToLoginScreen = navController::navigateToLoginScreen,
+//            navigateToUploadIdScreen = navController::navigateToUploadIdScreen,
+//            TODO Remove this and use above one after getting an api for upload id screen
+            navigateToRegisterScreen = navController::navigateToRegisterScreen,
         )
     }
 }
